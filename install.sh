@@ -22,3 +22,4 @@ echo "Installing python packages"
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper 
 sudo pip install psycopg2
+sudo pip install django
