@@ -4,12 +4,18 @@ echo "Updating..."
 sudo apt-get update
 
 echo "Installing..."
+
+# essentials
 sudo apt-get -y install python3-setuptools python3-dev build-essential
 
 sudo apt-get -y install git
 
 sudo apt-get -y install libpq-dev
 
+# postgresql
+sudo apt-get -y install postgresql postgresql-contrib pgadmin3
+
+# pip
 sudo easy_install3 pip
 
 echo "Installing python packages"
