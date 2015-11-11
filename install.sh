@@ -6,7 +6,7 @@ sudo apt-get update
 echo "Installing..."
 
 # essentials
-sudo apt-get -y install python3-setuptools python3-dev build-essential
+sudo apt-get -y install python3-setuptools python3-dev build-essential tmux
 
 sudo apt-get -y install git
 
@@ -23,3 +23,4 @@ sudo pip install virtualenv
 sudo pip install virtualenvwrapper 
 sudo pip install psycopg2
 sudo pip install django
+
