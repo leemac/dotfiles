@@ -12,6 +12,8 @@ sudo apt-get -y install git
 
 sudo apt-get -y install libpq-dev
 
+sudo apt-get -y install node npm
+
 # postgresql
 sudo apt-get -y install postgresql postgresql-contrib pgadmin3
 
