@@ -58,6 +58,8 @@ brew 'node'                                    # Node.js.
 # brew 'pgcli'                                   # PostgreSQL CLI with autocomplete and syntax highlighting.
 # brew 'pv'                                      # Monitor the progress of data through a pipe.
 # brew 'python3'                                 # Python 3
+brew 'rbenv' 
+brew 'ruby-build'
 # brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
 # brew 'rename'                                  # File renaming utilities.
 # brew 'rig'                                     # Random Identity Generator
@@ -72,7 +74,7 @@ brew 'node'                                    # Node.js.
 # brew 'starship'                                # The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 # brew 'svn'                                     # Subversion, required for some of the font casks
 # brew 'teamookla/speedtest/speedtest'           # Ookla Speedtest
-# brew 'tmux'                                    # Terminal multiplexer.
+brew 'tmux'                                     # Terminal multiplexer.
 # brew 'tree'                                    # Display directories as trees (with optional color/HTML output).
 # brew 'up'                                      # Ultimate Plumber
 # brew 'vim'                                     # Vi "workalike" with many additional features.
