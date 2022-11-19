@@ -6,9 +6,9 @@
 # brew 'cmatrix'                                 # Matrix in the terminal.
 # brew 'coreutils'                               # GNU core utilities (Mac is BSD).
 # brew 'cowsay'                                  # Configurable talking characters in ASCII art.
-# brew 'curl'                                    # HTTP client.
-# brew 'direnv'                                  # Shell environment switcher.
-# brew 'doctl'                                   # DigitalOcean CLI
+brew 'curl'                                    # HTTP client.
+brew 'direnv'                                  # Shell environment switcher.
+brew 'doctl'                                   # DigitalOcean CLI
 # brew 'duti'                                    # A command-line tool to select default applications for document types and URL schemes on Mac OS X
 # brew 'exiftool'                                # Image exif manipulation.
 # brew 'fd'                                      # A simple, fast, and user-friendly alternative to 'find'.
@@ -18,8 +18,8 @@
 # brew 'findutils'                               # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 # brew 'fzf'                                     # Fuzzy finder.
 # brew 'gcc'                                     # GNU Compiler Collection
-# brew 'gh'                                      # GitHub official CLI
-# brew 'git'                                     # Distributed revision control system.
+brew 'gh'                                      # GitHub official CLI
+brew 'git'                                     # Distributed revision control system.
 # brew 'git-cal'                                 # Visual commits calendar for git.
 # brew 'git-delta'                               # A syntax-highlighter for git and diff output
 # brew 'git-extras'                              # Extra git commands.
@@ -32,7 +32,7 @@
 # brew 'gnupg'                                   # GNU Pretty Good Privacy (PGP) package.
 # brew 'graphviz'                                # Rich set of graph drawing tools.
 # brew 'gron'                                    # Make JSON greppable!
-# brew 'htop'                                    # Improved top (interactive process viewer)
+brew 'htop'                                    # Improved top (interactive process viewer)
 # brew 'httpie'                                  # cURL-like tool for humans.
 # brew 'imagemagick'                             # CLI image manipulation utilities.
 # brew 'jcamiel/hurl/hurl'                       # Hurl CLI for HTTP testing.
@@ -51,7 +51,7 @@ brew 'navi'                                    # An interactive cheatsheet tool 
 # brew 'neofetch'                                # A command-line system information tool written in bash 3.2+
 brew 'neovim'                                  # Neovim
 # brew 'netcat'                                  # Utility for managing network connections.
-# brew 'node'                                    # Node.js.
+brew 'node'                                    # Node.js.
 # brew 'nss'                                     # Libraries for security-enabled client and server applications, required for mkcert and Firefox
 # brew 'nyancat'                                 # Nyancat in your terminal, rendered through ANSI escape sequences.
 # brew 'onefetch'                                # Git repository summary on your terminal
@@ -92,13 +92,12 @@ brew 'neovim'                                  # Neovim
 
 # Casks
 # cask '1password'                 # Password manager.
-# cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence.
-# cask 'alfred'                    # Power-user spotlight.
-# cask 'appcleaner'                # Mac app uninstaller.
+cask 'alacritty'                 # A cross-platform, GPU-accelerated terminal emulator. The fastest terminal emulator in existence. cask 'alfred'                    # Power-user spotlight.
+cask 'appcleaner'                # Mac app uninstaller.
 # cask 'beardedspice'              # More control over keyboard media keys.
 # cask 'bettertouchtool'           # Advanced system touch gesture control.
-# cask 'firefox'                   # Web browser from Mozilla.
-# cask 'google-chrome'             # Web browser from Google.
+cask 'firefox'                   # Web browser from Mozilla.
+cask 'google-chrome'             # Web browser from Google.
 # cask 'google-drive'              # Google Drive
 # cask 'keka'                      # Archive extraction and creation.
 # cask 'keybase'                   # Crypto for everyone.
@@ -106,10 +105,8 @@ brew 'neovim'                                  # Neovim
 # cask 'tableplus'                 # Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite & more.
 # cask 'paw'                       # The most advanced API tool for Mac
 # cask 'vimr'                      # neovim gui
-# cask 'virtualbox'                # Open source virtual machines.
-# cask 'virtualbox-extension-pack' # Extensions for Virtual Box.
-# cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
-# cask 'vlc'                       # Open source media player.
+cask 'visual-studio-code'        # Electron-based text editor from Microsoft.
+cask 'vlc'                       # Open source media player.
 
 # Cask Quick Look Plugins
 # cask 'betterzip'           # Quicklook for zip files.
@@ -125,12 +122,12 @@ brew 'neovim'                                  # Neovim
 # cask 'webpquicklook'       # Quicklook for webp files.
 
 # Cask Fonts
-# tap 'homebrew/cask-fonts' # official caskroom fonts tap
+tap 'homebrew/cask-fonts' # official caskroom fonts tap
 # cask 'font-dosis'
-# cask 'font-fira-sans'
+cask 'font-fira-sans'
 # cask 'font-fontawesome'
 # cask 'font-inconsolata'
-# cask 'font-jetbrains-mono-nerd-font'
+cask 'font-jetbrains-mono-nerd-font'
 # cask 'font-lato'
 # cask 'font-league-gothic'
 # cask 'font-montserrat'
