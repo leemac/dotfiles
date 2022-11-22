@@ -63,7 +63,7 @@ brew 'ruby-build'
 # brew 'reattach-to-user-namespace'              # Utility for tighter macOS and tmux integration
 # brew 'rename'                                  # File renaming utilities.
 # brew 'rig'                                     # Random Identity Generator
-# brew 'ripgrep'                                 # Faster Silver Searcher.
+brew 'ripgrep'                                 # Faster Silver Searcher.
 # brew 'rlwrap'                                  # A small utility that uses the GNU Readline library to allow the editing of keyboard input for any command.
 # brew 'rsync'                                   # Utility that provides fast incremental file transfer
 # brew 'sd'                                      # Intuitive find & replace CLI (sed alternative)
@@ -81,7 +81,7 @@ brew 'tmux'                                     # Terminal multiplexer.
 # brew 'wabt'                                    # The WebAssembly Binary Toolkit (pronounced wabbit).
 # brew 'watch'                                   # Executes a program periodically, showing output fullscreen
 # brew 'watchman'                                # Watches files and records, or triggers actions, when they change.
-# brew 'wget'                                    # Internet file retriever.
+brew 'wget'                                    # Internet file retriever.
 # brew 'whalebrew'                               # Homebrew but with docker
 # brew 'xxhash'                                  # XXHASH library and xxsum CLI.
 # brew 'yarn'                                    # JavaScript package manager.
