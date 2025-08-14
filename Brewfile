@@ -1,112 +1,101 @@
-tap "hashicorp/tap"
-tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
-brew "xz"
-brew "webp"
-brew "jpeg-xl"
-brew "aom"
-brew "autoconf"
-brew "automake"
-brew "btop"
-brew "python@3.12"
-brew "chezmoi"
-brew "chruby"
-brew "cmake"
-brew "libssh2"
-brew "curl"
-brew "direnv"
-brew "doctl"
-brew "dotnet"
-brew "dotnet@6"
-brew "unbound"
-brew "gnutls"
-brew "harfbuzz"
-brew "openjpeg"
-brew "libass"
-brew "libmicrohttpd"
-brew "librist"
-brew "pango"
-brew "tesseract"
-brew "ffmpeg"
-brew "flyctl"
-brew "gh"
-brew "git"
-brew "handbrake"
-brew "hashcat"
-brew "htop"
-brew "navi"
-brew "neovim"
-brew "node"
-brew "openvino"
-brew "pipenv"
-brew "postgresql@14", restart_service: true
-brew "protobuf"
-brew "python@3.10"
-brew "python@3.11"
-brew "ruby-build"
-brew "rbenv"
-brew "redis", restart_service: true
-brew "ripgrep"
-brew "ruby-install"
-brew "rust"
-brew "ssh-copy-id"
-brew "tmux"
-brew "wget"
-brew "yarn"
-brew "hashicorp/tap/terraform"
-brew "heroku/brew/heroku"
-cask "alacritty"
-cask "appcleaner"
-cask "betterdisplay"
-cask "font-fira-code"
-cask "font-fira-sans"
-cask "font-jetbrains-mono-nerd-font"
-cask "google-chrome"
-cask "jdownloader"
-cask "stats"
-cask "visual-studio-code"
-cask "vlc"
-vscode "ahmadawais.shades-of-purple"
-vscode "akamud.vscode-theme-onelight"
-vscode "bradlc.vscode-tailwindcss"
-vscode "dbaeumer.vscode-eslint"
-vscode "dhedgecock.radical-vscode"
-vscode "dotjoshjohnson.xml"
-vscode "eamodio.gitlens"
-vscode "editorconfig.editorconfig"
-vscode "enkia.tokyo-night"
-vscode "equinusocio.vsc-community-material-theme"
-vscode "equinusocio.vsc-material-theme"
-vscode "equinusocio.vsc-material-theme-icons"
-vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
-vscode "github.github-vscode-theme"
-vscode "graphql.vscode-graphql"
-vscode "graphql.vscode-graphql-syntax"
-vscode "hashicorp.terraform"
-vscode "juanmnl.vscode-theme-1984"
-vscode "kaiwood.endwise"
-vscode "ms-dotnettools.csharp"
-vscode "ms-dotnettools.vscode-dotnet-runtime"
-vscode "ms-python.isort"
-vscode "ms-python.python"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "ms-vscode-remote.remote-wsl"
-vscode "ms-vscode.wordcount"
-vscode "oderwat.indent-rainbow"
-vscode "pkief.material-icon-theme"
-vscode "prisma.prisma"
-vscode "rebornix.ruby"
-vscode "redhat.vscode-yaml"
-vscode "shd101wyy.markdown-preview-enhanced"
-vscode "streetsidesoftware.code-spell-checker"
-vscode "vscode-icons-team.vscode-icons"
-vscode "vscodevim.vim"
-vscode "wayou.vscode-todo-highlight"
-vscode "wingrunr21.vscode-ruby"
+# Dotfiles Brewfile - Mac Setup
+# Run: brew bundle install
+
+# Taps
+tap 'homebrew/bundle'
+tap 'homebrew/services'
+
+# Essential CLI Tools
+brew 'git'
+brew 'zsh'
+brew 'curl'
+brew 'wget'
+brew 'tree-sitter'
+brew 'fzf'
+brew 'ripgrep'
+brew 'btop'
+brew 'htop'
+brew 'tmux'
+brew 'neovim'
+brew 'navi'
+brew 'direnv'
+brew 'gh'
+
+# Development Tools
+brew 'node'
+brew 'yarn'
+brew 'python@3.13'
+brew 'python@3.12'
+brew 'python@3.11'
+brew 'python@3.10'
+brew 'pipenv'
+brew 'pipx'
+brew 'rust'
+brew 'go'
+brew 'terraform'
+brew 'ansible'
+brew 'awscli'
+brew 'doctl'
+brew 'flyctl'
+brew 'heroku'
+
+# Ruby/Version Management
+brew 'rbenv'
+brew 'ruby-build'
+brew 'ruby-install'
+brew 'chruby'
+
+# System Tools
+brew 'cmake'
+brew 'make'
+brew 'autoconf'
+brew 'automake'
+brew 'libtool'
+brew 'pkg-config'
+brew 'openssl@3'
+brew 'ca-certificates'
+
+# Media/Graphics
+brew 'ffmpeg'
+brew 'imagemagick'
+brew 'vips'
+
+# Databases
+brew 'postgresql@14'
+brew 'redis'
+brew 'sqlite'
+
+# Security/Networking
+brew 'gnupg'
+brew 'wireguard-go'
+brew 'wireguard-tools'
+brew 'ssh-copy-id'
+brew 'hashcat'
+
+# File Management
+brew 'chezmoi'
+brew 'unzip'
+
+# Productivity Casks
+cask '1password-cli'
+cask 'visual-studio-code'
+cask 'google-chrome'
+cask 'alacritty'
+cask 'stats'
+cask 'betterdisplay'
+cask 'amethyst'
+cask 'appcleaner'
+cask 'vlc'
+cask 'veracrypt'
+cask 'jdownloader'
+cask 'openscad'
+cask 'macfuse'
+
+# Fonts
+cask 'font-fira-code'
+cask 'font-fira-sans'
+cask 'font-jetbrains-mono-nerd-font'
+
+# Mac App Store (requires mas CLI)
+# brew "mas"
+# mas "Xcode", id: 497799835
