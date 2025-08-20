@@ -92,7 +92,7 @@ log_info "Backing up existing dotfiles..."
 backup_dir="$HOME/dotfiles_backup_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$backup_dir"
 
-dotfiles=(".zshrc" ".zshenv" ".gitconfig" ".gitignore_global")
+dotfiles=(".zshrc" ".zshenv" ".gitconfig")
 for file in "${dotfiles[@]}"; do
     if [[ -f "$HOME/$file" ]]; then
         cp "$HOME/$file" "$backup_dir/"
@@ -100,31 +100,48 @@ for file in "${dotfiles[@]}"; do
     fi
 done
 
-# Create symlinks for dotfiles
-log_info "Creating symlinks for dotfiles..."
-dotfiles_to_link=(
-    ".zshrc"
-    ".zshenv"
-)
-
-for file in "${dotfiles_to_link[@]}"; do
-    if [[ -f "$DOTFILES_DIR/$file" ]]; then
-        ln -sf "$DOTFILES_DIR/$file" "$HOME/$file"
-        log_success "Linked $file"
-    else
-        log_warning "$file not found in dotfiles directory"
-    fi
-done
-
-# Set up Git configuration if it exists
-if [[ -f "$DOTFILES_DIR/.gitconfig" ]]; then
-    ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
-    log_success "Linked .gitconfig"
+# Also backup SSH config if it exists
+if [[ -f "$HOME/.ssh/config" ]]; then
+    mkdir -p "$backup_dir/.ssh"
+    cp "$HOME/.ssh/config" "$backup_dir/.ssh/"
+    log_info "Backed up SSH config to $backup_dir"
 fi
 
-if [[ -f "$DOTFILES_DIR/.gitignore_global" ]]; then
-    ln -sf "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
-    log_success "Linked .gitignore_global"
+# Create symlinks for dotfiles
+log_info "Creating symlinks for dotfiles..."
+
+# Link Zsh configuration files
+if [[ -f "$DOTFILES_DIR/zsh/.zshrc" ]]; then
+    ln -sf "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+    log_success "Linked .zshrc"
+else
+    log_warning ".zshrc not found in zsh/ directory"
+fi
+
+if [[ -f "$DOTFILES_DIR/zsh/.zshenv" ]]; then
+    ln -sf "$DOTFILES_DIR/zsh/.zshenv" "$HOME/.zshenv"
+    log_success "Linked .zshenv"
+else
+    log_warning ".zshenv not found in zsh/ directory"
+fi
+
+# Link Git configuration
+if [[ -f "$DOTFILES_DIR/config/.gitconfig" ]]; then
+    ln -sf "$DOTFILES_DIR/config/.gitconfig" "$HOME/.gitconfig"
+    log_success "Linked .gitconfig"
+else
+    log_warning ".gitconfig not found in config/ directory"
+fi
+
+# Set up SSH configuration
+if [[ -f "$DOTFILES_DIR/config/ssh_config" ]]; then
+    mkdir -p "$HOME/.ssh"
+    chmod 700 "$HOME/.ssh"
+    ln -sf "$DOTFILES_DIR/config/ssh_config" "$HOME/.ssh/config"
+    chmod 600 "$HOME/.ssh/config"
+    log_success "Linked SSH config"
+else
+    log_warning "ssh_config not found in config/ directory"
 fi
 
 # Set up macOS defaults
@@ -172,9 +189,7 @@ log_info "Backup of your previous dotfiles saved to: $backup_dir"
 echo ""
 echo "🎉 Your Mac is now set up! Here are some next steps:"
 echo "1. Restart your terminal"
-echo "2. Configure Git with your name and email:"
-echo "   git config --global user.name 'Your Name'"
-echo "   git config --global user.email 'your.email@example.com'"
-echo "3. Set up SSH keys for GitHub/GitLab"
-echo "4. Customize your terminal theme and preferences"
+echo "2. Git is already configured with your name and email"
+echo "3. SSH config is already set up for your hosts"
+echo "4. Customize your terminal theme and preferences if needed"
 echo "5. Install any additional apps from the Mac App Store"
