@@ -151,34 +151,36 @@ if [[ -f "$DOTFILES_DIR/macos-defaults.sh" ]]; then
     log_success "macOS defaults applied"
 fi
 
+# 9/18 - Commented out additional tools installation as it keeps breaking
+
 # Install additional tools
-log_info "Setting up additional development tools..."
+# log_info "Setting up additional development tools..."
 
 # Install Python packages
-if command -v pip3 &>/dev/null; then
-    pip3 install --user --upgrade pip
-    pip3 install --user pipenv virtualenv black flake8 mypy pytest
-    log_success "Python packages installed"
-fi
+# if command -v pip3 &>/dev/null; then
+#     pip3 install --user --upgrade pip
+#     pip3 install --user pipenv virtualenv black flake8 mypy pytest
+#     log_success "Python packages installed"
+# fi
 
-# Install Node.js packages
-if command -v npm &>/dev/null; then
-    npm install -g yarn pnpm typescript ts-node eslint prettier
-    log_success "Node.js packages installed"
-fi
+# # Install Node.js packages
+# if command -v npm &>/dev/null; then
+#     npm install -g yarn pnpm typescript ts-node eslint prettier
+#     log_success "Node.js packages installed"
+# fi
 
-# Set up FZF key bindings and fuzzy completion
-if command -v fzf &>/dev/null; then
-    $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish
-    log_success "FZF key bindings installed"
-fi
+# # Set up FZF key bindings and fuzzy completion
+# if command -v fzf &>/dev/null; then
+#     $(brew --prefix)/opt/fzf/install --all --no-bash --no-fish
+#     log_success "FZF key bindings installed"
+# fi
 
-# Change default shell to zsh
-if [[ "$SHELL" != "/bin/zsh" ]] && [[ "$SHELL" != "/opt/homebrew/bin/zsh" ]]; then
-    log_info "Changing default shell to zsh..."
-    chsh -s /bin/zsh
-    log_success "Default shell changed to zsh"
-fi
+# # Change default shell to zsh
+# if [[ "$SHELL" != "/bin/zsh" ]] && [[ "$SHELL" != "/opt/homebrew/bin/zsh" ]]; then
+#     log_info "Changing default shell to zsh..."
+#     chsh -s /bin/zsh
+#     log_success "Default shell changed to zsh"
+# fi
 
 # Final message
 log_success "Dotfiles installation completed!"
