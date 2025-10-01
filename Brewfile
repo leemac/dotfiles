@@ -75,6 +75,7 @@ brew 'hashcat'
 # File Management
 brew 'chezmoi'
 brew 'unzip'
+brew 'rsync'
 
 # Productivity Casks
 cask '1password-cli'
